@@ -1,0 +1,66 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-08T01:38:58.911Z",
+  "summary": "The diff implements a single-page React + TS landing page with hero/message/reasons/proposal/footer sections, a romantic rose/pink/cream theme, and a client-side proposal interaction. However, the required generated image assets are not shown as added under the specified public assets path, and several unrequested backend/auth-related features were added despite the request being client-side only and explicitly listing auth as a non-goal.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "Add required generated images as static assets under frontend/public/assets/generated with the specified filenames and incorporate them into the page design.",
+      "reason": "The code references the required images (via /assets/generated/...), but the diff summary does not show any new files added under frontend/public/assets/generated, so the actual required image assets are not evidenced as present.",
+      "evidence": [
+        "frontend/src/components/propose-day/HeroSection.tsx",
+        "frontend/src/components/propose-day/ProposalInteraction.tsx (truncated)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Backend canister file added (empty actor), despite backend changes not being required and the solution requested to be client-side only.",
+      "reason": "BuildRequest explicitly says backend changes are not required; diff adds backend/main.mo.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Internet Identity / authentication plumbing and actor creation hooks added and wired into the app.",
+      "reason": "Non-goals explicitly include authentication/Internet Identity flows, yet the diff adds InternetIdentityProvider, useInternetIdentity, useActor, and React Query setup for actor management.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts (truncated)",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Footer attribution/link to caffeine.ai added.",
+      "reason": "Not requested in the BuildRequest requirements or acceptance criteria.",
+      "evidence": [
+        "frontend/src/components/propose-day/FooterSection.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/propose-day/FooterSection.tsx",
+    "frontend/src/components/propose-day/HeroSection.tsx",
+    "frontend/src/components/propose-day/MessageSection.tsx",
+    "frontend/src/components/propose-day/ProposalInteraction.tsx",
+    "frontend/src/components/propose-day/ProposalSection.tsx",
+    "frontend/src/components/propose-day/ReasonsSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/ProposeDayPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

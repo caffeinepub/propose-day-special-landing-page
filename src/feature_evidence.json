@@ -1,0 +1,77 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-single-page-propose-day-special-webpage-with-a-romantic-hero-section-headline-short-subtext-primary-call-to-action-button-and-clear-scrolling-structure-hero-message-section-reasons-notes-section-proposal-question-section-footer",
+      "featureTitle": "Create a responsive, single-page “Propose Day” special webpage with a romantic hero section (headline, short subtext, primary call-to-action button) and clear scrolling structure (hero, message section, reasons/notes section, proposal question section, footer).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/main.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-interactive-will-you-be-mine-proposal-section-that-supports-a-simple-client-side-interaction-clicking-yes-shows-a-celebratory-confirmation-state-clicking-not-yet-shows-a-gentle-non-blocking-secondary-state-encouraging-reconsideration-keep-all-interactions-purely-client-side-no-persistence-required",
+      "featureTitle": "Add an interactive “Will you be mine?” proposal section that supports a simple, client-side interaction: clicking “Yes” shows a celebratory confirmation state; clicking “Not yet” shows a gentle, non-blocking secondary state encouraging reconsideration. Keep all interactions purely client-side (no persistence required).",
+      "files": [
+        "frontend/src/components/propose-day/ProposalInteraction.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-coherent-visual-theme-for-a-romantic-propose-day-page-avoid-blue-purple-define-and-use-a-consistent-palette-typography-scale-spacing-and-decorative-elements-across-all-sections",
+      "featureTitle": "Apply a coherent visual theme for a romantic “Propose Day” page (avoid blue/purple). Define and use a consistent palette, typography scale, spacing, and decorative elements across all sections.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-required-generated-images-as-static-assets-and-incorporate-them-into-the-page-design-e-g-hero-background-illustration-heart-motif-store-them-under-frontend-public-assets-generated-and-reference-them-directly-from-the-frontend",
+      "featureTitle": "Add required generated images as static assets and incorporate them into the page design (e.g., hero background/illustration, heart motif). Store them under frontend/public/assets/generated and reference them directly from the frontend.",
+      "files": [],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

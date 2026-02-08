@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main app component that renders the ProposeDayPage as the root component.",
+  "frontend/src/pages/ProposeDayPage.tsx": "Single-page layout component that composes all sections (Hero, Message, Reasons, Proposal, Footer) with a romantic gradient background.",
+  "frontend/src/components/propose-day/HeroSection.tsx": "Full-screen hero section with background image, heart emblem, main heading \"Will You Be Mine?\", subtext, and CTA button with smooth scroll to proposal section.",
+  "frontend/src/components/propose-day/MessageSection.tsx": "Heartfelt message section with a card containing romantic text expressing feelings and intentions.",
+  "frontend/src/components/propose-day/ReasonsSection.tsx": "Grid of six cards displaying reasons for adoration, each with an icon, title, and description, styled with hover effects.",
+  "frontend/src/components/propose-day/ProposalSection.tsx": "Container section that wraps the ProposalInteraction component with proper spacing and centering.",
+  "frontend/src/components/propose-day/ProposalInteraction.tsx": "Interactive proposal component with three states (default, yes, not-yet) featuring \"Yes, I Will!\" and \"Not Yet\" buttons with appropriate confirmation messages for each response.",
+  "frontend/src/components/propose-day/FooterSection.tsx": "Footer section with Propose Day 2026 branding and attribution to caffeine.ai with heart icons.",
+  "frontend/src/index.css": "Global styles with romantic rose/cream/gold OKLCH color palette, Playfair Display serif font for headings, Inter sans-serif for body, and custom utility classes.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with romantic color palette (rose, pink, gold, cream), Playfair Display and Inter fonts, and custom spacing/shadow utilities.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are required for this client-side only application."
+}

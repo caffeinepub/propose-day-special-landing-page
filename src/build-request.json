@@ -1,0 +1,110 @@
+{
+  "kind": "build_request",
+  "title": "Propose Day special landing page",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive, single-page “Propose Day” special webpage with a romantic hero section (headline, short subtext, primary call-to-action button) and clear scrolling structure (hero, message section, reasons/notes section, proposal question section, footer).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Propose day special web page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page renders as a cohesive single-page experience on desktop and mobile without horizontal scrolling",
+        "Hero section includes a prominent headline, 1–2 lines of supporting text, and a primary CTA button",
+        "Content is organized into distinct sections with consistent spacing and typography"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add an interactive “Will you be mine?” proposal section that supports a simple, client-side interaction: clicking “Yes” shows a celebratory confirmation state; clicking “Not yet” shows a gentle, non-blocking secondary state encouraging reconsideration. Keep all interactions purely client-side (no persistence required).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Propose day special web page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Proposal section includes at minimum two buttons: “Yes” and “Not yet”",
+        "Clicking “Yes” transitions to a visible confirmation state (e.g., message card, animation, or banner)",
+        "Clicking “Not yet” shows a polite message without breaking layout or navigation",
+        "Reloading the page resets the interaction state (no backend storage)"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Apply a coherent visual theme for a romantic “Propose Day” page (avoid blue/purple). Define and use a consistent palette, typography scale, spacing, and decorative elements across all sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Propose day special web page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Theme uses a romantic palette (e.g., blush/rose/cream with warm accent like gold) and is applied consistently across sections",
+        "Buttons, cards, and headings follow a consistent component style",
+        "All user-facing text is in English"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add required generated images as static assets and incorporate them into the page design (e.g., hero background/illustration, heart motif). Store them under frontend/public/assets/generated and reference them directly from the frontend.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Propose day special web page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist in frontend/public/assets/generated with the specified filenames",
+        "The page loads and displays the images without routing through the backend",
+        "Images are responsive (scale/crop appropriately) and do not cause layout shift"
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must use React + TypeScript with Tailwind and Shadcn components (compose UI components; do not modify read-only UI component sources).",
+    "Do not edit files under frontend/src/components/ui or any other immutable paths provided by the platform.",
+    "Backend changes are not required for this request; keep the solution client-side unless explicitly needed later."
+  ],
+  "nonGoals": [
+    "User accounts, authentication, or Internet Identity flows",
+    "Persisting proposal responses or sending notifications/emails",
+    "Multi-page site, admin panels, or CMS editing"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Romantic hero background illustration with soft gradients, subtle bokeh, and heart motifs (propose-hero-bg.dim_1920x1080.png)",
+      "Minimal elegant heart emblem/icon with a warm accent color (heart-emblem.dim_512x512.png)",
+      "Small repeating heart pattern tile, subtle and low-contrast (heart-pattern-tile.dim_512x512.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Use English for all user-facing text."
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

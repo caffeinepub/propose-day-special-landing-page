@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        
+        /* Romantic Rose & Cream Palette */
+        --background: 0.98 0.015 15;
+        --foreground: 0.25 0.08 15;
+        
+        --card: 1 0.01 15;
+        --card-foreground: 0.25 0.08 15;
+        
+        --popover: 1 0.01 15;
+        --popover-foreground: 0.25 0.08 15;
+        
+        /* Rose primary */
+        --primary: 0.55 0.18 15;
+        --primary-foreground: 0.98 0.01 15;
+        
+        /* Soft pink secondary */
+        --secondary: 0.95 0.025 340;
+        --secondary-foreground: 0.35 0.08 15;
+        
+        /* Muted rose */
+        --muted: 0.93 0.02 15;
+        --muted-foreground: 0.50 0.06 15;
+        
+        /* Light pink accent */
+        --accent: 0.92 0.03 340;
+        --accent-foreground: 0.35 0.08 15;
+        
+        /* Soft red destructive */
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.98 0.01 15;
+        
+        /* Rose borders */
+        --border: 0.90 0.03 15;
+        --input: 0.90 0.03 15;
+        --ring: 0.60 0.15 15;
+        
+        /* Chart colors - romantic palette */
+        --chart-1: 0.60 0.18 15;
+        --chart-2: 0.65 0.15 340;
+        --chart-3: 0.70 0.12 30;
+        --chart-4: 0.55 0.20 350;
+        --chart-5: 0.75 0.10 20;
+    }
+
+    .dark {
+        --background: 0.20 0.04 15;
+        --foreground: 0.95 0.015 15;
+        
+        --card: 0.25 0.05 15;
+        --card-foreground: 0.95 0.015 15;
+        
+        --popover: 0.22 0.05 15;
+        --popover-foreground: 0.95 0.015 15;
+        
+        /* Lighter rose for dark mode */
+        --primary: 0.70 0.15 15;
+        --primary-foreground: 0.20 0.04 15;
+        
+        --secondary: 0.30 0.06 340;
+        --secondary-foreground: 0.95 0.015 15;
+        
+        --muted: 0.28 0.05 15;
+        --muted-foreground: 0.70 0.08 15;
+        
+        --accent: 0.35 0.08 340;
+        --accent-foreground: 0.95 0.015 15;
+        
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.95 0.015 15;
+        
+        --border: 0.35 0.06 15;
+        --input: 0.35 0.06 15;
+        --ring: 0.65 0.12 15;
+        
+        --chart-1: 0.65 0.16 15;
+        --chart-2: 0.70 0.13 340;
+        --chart-3: 0.75 0.10 30;
+        --chart-4: 0.60 0.18 350;
+        --chart-5: 0.80 0.08 20;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', Georgia, serif;
+    }
+}
+
+@layer utilities {
+    .text-gold {
+        color: oklch(0.75 0.12 75);
+    }
+    
+    .bg-gold {
+        background-color: oklch(0.75 0.12 75);
+    }
+    
+    .from-cream {
+        --tw-gradient-from: oklch(0.97 0.01 60) var(--tw-gradient-from-position);
+    }
+    
+    .to-cream {
+        --tw-gradient-to: oklch(0.97 0.01 60) var(--tw-gradient-to-position);
+    }
+    
+    .opacity-3 {
+        opacity: 0.03;
+    }
+}

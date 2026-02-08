@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Create a \"Propose Day\" special web page.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Romantic hero background illustration with soft gradients, subtle bokeh, and heart motifs (propose-hero-bg.dim_1920x1080.png)\n- Minimal elegant heart emblem/icon with a warm accent color (heart-emblem.dim_512x512.png)\n- Small repeating heart pattern tile, subtle and low-contrast (heart-pattern-tile.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-single-page-propose-day-special-webpage-with-a-romantic-hero-section-headline-short-subtext-primary-call-to-action-button-and-clear-scrolling-structure-hero-message-section-reasons-notes-section-proposal-question-section-footer",
+      "title": "Create a responsive, single-page “Propose Day” special webpage with a romantic hero section (headline, short subtext, primary call-to-action button) and clear scrolling structure (hero, message section, reasons/notes section, proposal question section, footer).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-interactive-will-you-be-mine-proposal-section-that-supports-a-simple-client-side-interaction-clicking-yes-shows-a-celebratory-confirmation-state-clicking-not-yet-shows-a-gentle-non-blocking-secondary-state-encouraging-reconsideration-keep-all-interactions-purely-client-side-no-persistence-required",
+      "title": "Add an interactive “Will you be mine?” proposal section that supports a simple, client-side interaction: clicking “Yes” shows a celebratory confirmation state; clicking “Not yet” shows a gentle, non-blocking secondary state encouraging reconsideration. Keep all interactions purely client-side (no persistence required).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-visual-theme-for-a-romantic-propose-day-page-avoid-blue-purple-define-and-use-a-consistent-palette-typography-scale-spacing-and-decorative-elements-across-all-sections",
+      "title": "Apply a coherent visual theme for a romantic “Propose Day” page (avoid blue/purple). Define and use a consistent palette, typography scale, spacing, and decorative elements across all sections.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-required-generated-images-as-static-assets-and-incorporate-them-into-the-page-design-e-g-hero-background-illustration-heart-motif-store-them-under-frontend-public-assets-generated-and-reference-them-directly-from-the-frontend",
+      "title": "Add required generated images as static assets and incorporate them into the page design (e.g., hero background/illustration, heart motif). Store them under frontend/public/assets/generated and reference them directly from the frontend.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Design and build a Propose Day special web page",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Propose Day special landing page",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

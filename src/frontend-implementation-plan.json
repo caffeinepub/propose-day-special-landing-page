@@ -1,0 +1,117 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Propose Day special single-page landing (React + Tailwind + shadcn/ui)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive single-page Propose Day landing page with a romantic hero and clear scrollable section structure.",
+      "acceptanceCriteria": [
+        "Page renders as a cohesive single-page experience on desktop and mobile without horizontal scrolling",
+        "Hero section includes a prominent headline, 1–2 lines of supporting text, and a primary CTA button",
+        "Content is organized into distinct sections with consistent spacing and typography"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app root that renders a single-page Propose Day layout with clearly separated sections (hero, message, reasons/notes, proposal question, footer) and responsive container/spacing using Tailwind. Use shadcn-ui components (e.g., Button, Card, Separator) for consistent structure; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/propose-day/ProposeDaySections.tsx",
+          "operation": "create",
+          "description": "Create section components (HeroSection, MessageSection, ReasonsSection, ProposalSection, FooterSection) composed into a single scrolling page; include semantic headings and consistent section spacing. Use shadcn-ui components (e.g., Card) where appropriate; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/propose-day/useScrollToSection.ts",
+          "operation": "create",
+          "description": "Add a small hook to support smooth scrolling from the hero CTA to the proposal section using refs/ids; keep behavior purely client-side."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Verify the App import resolves correctly and keep providers intact; ensure the single-page Propose Day experience is the primary rendered UI."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a client-side interactive “Will you be mine?” section with Yes/Not yet buttons and corresponding confirmation/secondary states.",
+      "acceptanceCriteria": [
+        "Proposal section includes at minimum two buttons: “Yes” and “Not yet”",
+        "Clicking “Yes” transitions to a visible confirmation state (e.g., message card, animation, or banner)",
+        "Clicking “Not yet” shows a polite message without breaking layout or navigation",
+        "Reloading the page resets the interaction state (no backend storage)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/propose-day/ProposalInteraction.tsx",
+          "operation": "create",
+          "description": "Implement the proposal interaction UI with two buttons (“Yes”, “Not yet”) and internal React state to swap between default/confirmation/secondary states; ensure page reload resets state. Use shadcn-ui Button and Card/Alert styling for states; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/propose-day/ProposeDaySections.tsx",
+          "operation": "modify",
+          "description": "Wire ProposalInteraction into the proposal question section so it is visible in the page flow and reachable via scrolling; ensure the section remains non-blocking and layout-stable on state changes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Apply a cohesive romantic visual theme (no blue/purple) with consistent palette, typography scale, spacing, and decorative elements across all sections.",
+      "acceptanceCriteria": [
+        "Theme uses a romantic palette (e.g., blush/rose/cream with warm accent like gold) and is applied consistently across sections",
+        "Buttons, cards, and headings follow a consistent component style",
+        "All user-facing text is in English"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define global theme tokens and base styles using Tailwind (and shadcn-style CSS variables) with a romantic palette (blush/rose/cream + warm gold accent), ensuring no blue/purple tones; set consistent typography defaults and section spacing utilities via Tailwind classes used in components."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend/adjust Tailwind theme configuration if needed to support the romantic palette (via CSS variables or additional named colors) and ensure consistent typography/spacing utilities across the page."
+        },
+        {
+          "path": "frontend/src/components/propose-day/ProposeDaySections.tsx",
+          "operation": "modify",
+          "description": "Apply consistent Tailwind class patterns for headings, body text, cards, buttons, and decorative elements across all sections; keep all user-facing copy in English. Use shadcn-ui components for consistent button/card styling; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add required generated images as static assets and integrate them into the page design responsively without layout shift.",
+      "acceptanceCriteria": [
+        "Generated images exist in frontend/public/assets/generated with the specified filenames",
+        "The page loads and displays the images without routing through the backend",
+        "Images are responsive (scale/crop appropriately) and do not cause layout shift"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/propose-hero-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated romantic hero background illustration static asset at this exact path/filename for direct frontend use."
+        },
+        {
+          "path": "frontend/public/assets/generated/heart-emblem.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated heart emblem/icon static asset at this exact path/filename for direct frontend use."
+        },
+        {
+          "path": "frontend/public/assets/generated/heart-pattern-tile.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated repeating heart pattern tile static asset at this exact path/filename for direct frontend use."
+        },
+        {
+          "path": "frontend/src/components/propose-day/ProposeDaySections.tsx",
+          "operation": "modify",
+          "description": "Incorporate static images into the design: use frontend/public/assets/generated/propose-hero-bg.dim_1920x1080.png in the hero (background/illustration), frontend/public/assets/generated/heart-emblem.dim_512x512.png as a motif/icon, and frontend/public/assets/generated/heart-pattern-tile.dim_512x512.png as a subtle decorative pattern. Ensure responsive sizing/cropping and reserve space (e.g., fixed aspect containers) to avoid layout shift."
+        }
+      ]
+    }
+  ]
+}
